@@ -1,0 +1,24 @@
+jooq {
+	version = jooqVersion
+	edition = "OSS"
+	app(sourceSets.main) {
+		jdbc {
+			driver = "org.postgresql.Driver"
+			url = "jdbc:postgresql://localhost/app"
+			user = "postgres"
+			password = ""
+		}
+		generator {
+			database {
+				inputSchema = "public"
+				name = "org.jooq.meta.postgres.PostgresDatabase"
+			}
+			generate {
+				javaTimeTypes = true
+			}
+			target {
+				packageName = "com.example.app.generated.jooq"
+			}
+		}
+	}
+}

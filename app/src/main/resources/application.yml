@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost/app
+    username: postgres
+    password: null
+    driverClassName: org.postgresql.Driver
+
+logging.level.org.jooq.tools.LoggerListener: DEBUG
+
+graphql:
+  playground:
+    mapping: /playground
+    endpoint: /graphql
