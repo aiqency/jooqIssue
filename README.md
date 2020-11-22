@@ -2,6 +2,8 @@
 
 Needs a postgres 11 instance running with a database called `app`.
 
+### Reproduce
+
 ```bash
 ./gradlew build
 ./gradlew app:bootRun
@@ -24,3 +26,5 @@ query {
 ```
 
 This should throw the exception.
+
+Search for the [TODO](./app/src/main/kotlin/com/example/app/dao/UserDao.kt) to see the lines causing the error.
